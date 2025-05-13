@@ -45,16 +45,11 @@ void loop() {
   Serial.print("Cartao detectado! UID: ");
   Serial.println(uidString);
 
-  // Compara UID e mostra o nome correspondente
-  String nome = "";
+ String json = "{";
+  json += "\"uid\":\"" + uidString + "\"";
+  json += "}";
 
-  if (uidString == "BB79B302") {
-    nome = "Claudinei";
-  } else if (uidString == "FB4EC701") {
-    nome = "Otavio";
-  } else {
-    nome = "Nao autorizado";
-  }
+  Serial.println(json);
 
   // Mostra o nome no LCD
   lcd.clear();
