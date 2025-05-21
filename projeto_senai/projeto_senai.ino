@@ -51,13 +51,6 @@ void loop() {
 
   Serial.println(json);
 
-  // Mostra o nome no LCD
-  lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print("Cartao de:");
-  lcd.setCursor(0, 1);
-  lcd.print(nome);
-
   // Toca o buzzer
   tone(buzzerPin, 1000);
   delay(300);
